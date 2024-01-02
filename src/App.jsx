@@ -13,12 +13,12 @@ export default function App(){
     <div id="side-content">
       <div id="money-gained" className="module">
         <h1>Money Gained</h1>
-        <h2 className="amounts">+ {moneyGained}</h2>
+        <h1 className="amounts">+ {moneyGained}</h1>
       </div>
 
       <div id="money-spent" className="module">
         <h1>Money Spent</h1>
-        <h2 className="amounts">- {moneySpent}</h2>
+        <h1 className="amounts">- {moneySpent}</h1>
       </div>
     </div>
 

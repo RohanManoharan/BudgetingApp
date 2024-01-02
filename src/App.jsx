@@ -8,17 +8,17 @@ export default function App(){
 
   return (
     <>
+    <h1 id="month" className="module">Month of {monthName}</h1>
+    
     <div id="side-content">
-      <h1 id="month" className="heading">Month of {monthName}</h1>
-      
-      <div>
+      <div id="money-gained" className="module">
         <h1>Money Gained</h1>
-        <h2>+{moneyGained}</h2>
+        <h2 className="amounts">+ {moneyGained}</h2>
       </div>
 
-      <div>
+      <div id="money-spent" className="module">
         <h1>Money Spent</h1>
-        <h2>-{moneySpent}</h2>
+        <h2 className="amounts">- {moneySpent}</h2>
       </div>
     </div>
     </>

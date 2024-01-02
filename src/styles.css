@@ -1,0 +1,10 @@
+#side-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100vh;
+    margin-top: -10vh;
+}
+div{
+    border: 1px solid black;
+}

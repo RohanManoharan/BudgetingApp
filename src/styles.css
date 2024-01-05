@@ -22,12 +22,7 @@ html{
     margin: 20px;
 }
 
-h1{
-    display: flex;
-    justify-content: center;
-}
-
-h2{
+h1, h2{
     display: flex;
     justify-content: center;
 }
@@ -45,6 +40,7 @@ h2{
 }
 
 #transactions {
+    overflow-x: auto;
     margin-top: -10%;
     width: 67%;
     margin-left: 25%;
@@ -84,4 +80,14 @@ tr:hover {background-color: rgb(160, 81, 28);}
 input, select{
     background-color: #62676e;
     border-radius: 5px;
+}
+
+#table-month{
+    margin-top: -10%;
+    width: 67%;
+    margin-left: 25%;
+    text-align: center;
+    height: 250px;
+    font-size: 75px;
+    font-family: 'Times New Roman', sans-serif;
 }

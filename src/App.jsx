@@ -8,7 +8,7 @@ export default function App(){
 
   return (
     <>
-    <h1 id="month" className="module">Month of {monthName}</h1>
+    <h1 id="month" className="module">Hello [name]!</h1>
     
     <div id="side-content">
       <div id="money-gained" className="module">
@@ -22,7 +22,10 @@ export default function App(){
       </div>
     </div>
 
+    
+
     {/* Shows transactions from the current month */}
+    <h1 id="table-month">{monthName}</h1>
     <div id="transactions">
       <button type="button">Add Transaction</button>
       <table>

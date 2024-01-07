@@ -3,6 +3,7 @@ import "./styles.css"
 export default function App(){
   const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
   let monthName = month[(new Date()).getMonth()];
+  let totalBalance = 0;
   let moneyGained = 0;
   let moneySpent = 0;
 
@@ -11,18 +12,21 @@ export default function App(){
     <h1 id="month" className="module">Hello [name]!</h1>
     
     <div id="side-content">
+    <div id="money-total" className="module">
+        <h1>Total Balance</h1>
+        <h1 className="amounts">$ {totalBalance}</h1>
+      </div>
+
       <div id="money-gained" className="module">
         <h1>Money Gained</h1>
-        <h1 className="amounts">+ {moneyGained}</h1>
+        <h1 className="amounts">+ $ {moneyGained}</h1>
       </div>
 
       <div id="money-spent" className="module">
         <h1>Money Spent</h1>
-        <h1 className="amounts">- {moneySpent}</h1>
+        <h1 className="amounts">- $ {moneySpent}</h1>
       </div>
     </div>
-
-    
 
     {/* Shows transactions from the current month */}
     <h1 id="table-month">{monthName}</h1>

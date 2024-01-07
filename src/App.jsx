@@ -8,6 +8,8 @@ export default function App(){
 
   return (
     <>
+    
+
     <h1 id="month" className="module">Hello [name]!</h1>
     
     <div id="side-content">
@@ -21,8 +23,6 @@ export default function App(){
         <h1 className="amounts">- {moneySpent}</h1>
       </div>
     </div>
-
-    
 
     {/* Shows transactions from the current month */}
     <h1 id="table-month">{monthName}</h1>
@@ -71,6 +71,8 @@ export default function App(){
         </tr>
       </table>
     </div>
+
+
     </>
   )
 }

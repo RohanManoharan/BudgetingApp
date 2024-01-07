@@ -1,3 +1,4 @@
+import Navbar from "./components/Navbar";
 import "./styles.css"
 
 export default function App(){
@@ -9,7 +10,7 @@ export default function App(){
 
   return (
     <>
-    
+    <Navbar/>
 
     <h1 id="month" className="module">Hello [name]!</h1>
     

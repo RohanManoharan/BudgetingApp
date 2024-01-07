@@ -95,3 +95,29 @@ input, select{
     font-size: 75px;
     font-family: 'Times New Roman', sans-serif;
 }
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 16px;
+    background-color: rgb(35, 40, 46);
+    margin-bottom: 16px;
+}
+
+.navbar-logo{
+    color:white;
+    font-size: 20px;
+}
+
+.navbar-menu{
+    display: flex;
+    list-style-type: none;
+    gap: 30px;
+    margin: 0;
+    align-items: center;
+}
+
+.navbar-menu li a{
+    text-decoration: none;
+    color: white
+}

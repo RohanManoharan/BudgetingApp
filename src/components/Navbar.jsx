@@ -4,7 +4,7 @@ export default function Navbar(){
     return(
     <div className='navbar'>
         <div className='logo'>
-            Budgetting App                
+            Budgeting App                
         </div>
             <ul className='navbar-menu'>
                 <li><a href="/">Home</a></li>

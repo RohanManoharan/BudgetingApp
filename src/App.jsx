@@ -15,7 +15,7 @@ export default function App(){
     <h1 id="month" className="module">Hello [name]!</h1>
     
     <div id="side-content">
-    <div id="money-total" className="module">
+      <div id="money-total" className="module">
         <h1>Total Balance</h1>
         <h1 className="amounts">$ {totalBalance}</h1>
       </div>

@@ -16,10 +16,11 @@ html{
 } */
 
 .module{
-    border: 3px solid rgb(167, 169, 172);
-    width: 17%;
+    padding: 10px;
+    width: 300px;
     border-radius: 10px;
     margin: 20px;
+    text-align: center;
 }
 
 h1, h2{
@@ -43,13 +44,15 @@ h1, h2{
     background-color: rgb(102, 70, 70);
 }
 
+#budget-remaining {
+    background-color: #16573f;
+}
+
 #transactions {
     overflow-x: auto;
     margin-top: -10%;
     width: 67%;
-    margin-left: 25%;
-    border: 1px solid rgb(145, 142, 142);
-    border-radius: 10px;
+    margin-left: 500px;
     text-align: center;
     height: 700px;
 }
@@ -63,10 +66,14 @@ button{
 }
 
 table{
+    margin-top: 20px;
     font-size: 18px;
     width: 100%;
     text-align: center;
-    padding: 15px;
+    border-spacing: 0;
+    border-collapse: separate;
+    border: 3px solid rgb(18, 20, 22);
+    border-radius: 10px;
 }
 
 th {
@@ -76,14 +83,17 @@ th {
 
 th, td {
     border-bottom: 1px solid #62676e;
+    padding-top: 10px;
+    padding-bottom: 10px;    
 }
 
 tr:nth-child(even) {background-color: rgb(35, 41, 61);}
-tr:hover {background-color: rgb(160, 81, 28);}
+tr:hover {background-color: rgb(15, 53, 50);}
 
 input, select{
     background-color: #62676e;
     border-radius: 5px;
+    height: 20px;
 }
 
 #table-month{
@@ -107,6 +117,7 @@ input, select{
 .navbar-logo{
     color:white;
     font-size: 20px;
+    align-self: center;
 }
 
 .navbar-menu{
@@ -115,9 +126,42 @@ input, select{
     gap: 30px;
     margin: 0;
     align-items: center;
+    height: 40px;
 }
 
 .navbar-menu li a{
     text-decoration: none;
     color: white
+}
+
+.navbar-menu li:hover {
+    /* background-color: rgb(63, 71, 80); */
+    font-size: larger;
+}
+
+.grid {
+    margin-left: 500px;
+    margin-top: -250px;
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    grid-auto-rows: 300px;
+    gap: 2rem;
+}
+
+.item {
+    background-color: rgb(18, 43, 66);
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item:hover {
+    background-color: rgb(32, 56, 78);
+}
+
+#add-more {
+    font-size: 80px;
 }

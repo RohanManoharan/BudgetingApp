@@ -12,7 +12,7 @@ export default function App(){
     <>
     <Navbar/>
 
-    <h1 id="month" className="module">Hello [name]!</h1>
+    <h1 id="greeting">Hello [name]!</h1>
     
     <div id="side-content">
       <div id="money-total" className="module">

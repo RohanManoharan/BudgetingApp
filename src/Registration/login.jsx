@@ -1,5 +1,5 @@
 import React from 'react';
-import './login-register.css';
+import '../../styles.css';
 
 import { FaUser, FaLock } from "react-icons/fa";
 

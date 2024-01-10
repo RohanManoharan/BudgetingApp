@@ -1,8 +1,8 @@
 import { useState } from "react";
 import Navbar from "./components/Navbar";
 import "./styles.css"
-import { Transaction_Form } from "./Home/Transaction_Form";
-import { Transaction_List } from "./Home/Transaction_List";
+import { Transaction_Form } from "./components/Home/Transaction_Form";
+import { Transaction_List } from "./components/Home/Transaction_List";
 
 export default function App(){
   const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];

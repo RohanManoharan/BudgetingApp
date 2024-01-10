@@ -2,9 +2,13 @@ import React from 'react';
 import './login-register.css';
 
 import { FaUser, FaLock } from "react-icons/fa";
+import Navbar from '../components/Navbar';
+
 
 export default function Register() {
     return (
+        <>
+        <Navbar/>     
         <div className='wrapper'>
             <form action="">
                 <h1>Register</h1>
@@ -27,6 +31,7 @@ export default function Register() {
                 </div>
             </form>
         </div>
+        </>
     )
 }
 

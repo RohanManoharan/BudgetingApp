@@ -11,7 +11,7 @@ import Register from './Registration/register.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Register/>,
+    element: <App/>,
   },
   {
     path: "Monthly-Planner",

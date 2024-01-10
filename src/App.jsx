@@ -1,12 +1,29 @@
+import { useState } from "react";
 import Navbar from "./components/Navbar";
 import "./styles.css"
+import { Transaction_Form } from "./Home/Transaction_Form";
+import { Transaction_List } from "./Home/Transaction_List";
 
 export default function App(){
   const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
   let monthName = month[(new Date()).getMonth()];
+  let date = (new Date()).toDateString().slice(4, 10).replace(/\b0/, '');
   let totalBalance = 0;
   let moneyGained = 0;
   let moneySpent = 0;
+
+  const[showTForm, setShowTForm] = useState(false);
+  const[transactions, setTransactions] = useState([]);
+
+  function addTransaction(service, description, category, date, price){
+    setTransactions(currentTransactions => {
+      return [...currentTransactions, { id: crypto.randomUUID(), service: service, desc: description, category: category, date: date, price: price }]
+    })
+  }
+
+  function newTransaction(){
+    setShowTForm(true);
+  }
 
   return (
     <>
@@ -14,6 +31,7 @@ export default function App(){
 
     <h1 id="greeting">Hello [NAME]!</h1>
     
+    {/* Side content for money information */}
     <div id="side-content">
       <div id="money-total" className="module">
         <h1>Total Balance</h1>
@@ -34,7 +52,9 @@ export default function App(){
     {/* Shows transactions from the current month */}
     <h1 id="table-month">{monthName}</h1>
     <div id="transactions">
-      <button type="button">Add Transaction</button>
+      <button type="button" id="add-transaction" onClick={newTransaction}>Add New Transaction</button>
+
+      {showTForm && <Transaction_Form onSubmit={addTransaction} date={date} setShowTForm={setShowTForm} />}
       <table>
         <tr>
           <th>Service</th>
@@ -42,40 +62,9 @@ export default function App(){
           <th>Category</th>
           <th>Date</th>
           <th>Amount</th>
+          <th></th>
         </tr>
-        <tr>
-          <td><input type="text" placeholder="Service"></input></td>
-          <td><input type="text" placeholder="Description"></input></td>
-          <td><select>
-                <option>Entertainment</option>
-                <option>Food</option>
-                <option>Miscellaneous</option>
-                <option>option...</option>
-              </select></td>
-          <td>[Current Date]</td>
-          <td>$ <input type="text" placeholder="Amount"></input></td>
-        </tr>
-        <tr>
-          <td>Steam</td>
-          <td>Hades lol</td>
-          <td>Entertainment</td>
-          <td>Jan 22th</td>
-          <td>$ 36.73</td>
-        </tr>
-        <tr>
-          <td>stuff</td>
-          <td>desc</td>
-          <td>Miscellaneous</td>
-          <td>Jan 3th</td>
-          <td>$ 20.00</td>
-        </tr>
-        <tr>
-          <td>stuff again</td>
-          <td>desc</td>
-          <td>Miscellaneous</td>
-          <td>Jan 1st</td>
-          <td>$ 22.70</td>
-        </tr>
+        <Transaction_List transactions={transactions} />
       </table>
     </div>
 

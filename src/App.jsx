@@ -29,7 +29,7 @@ export default function App(){
     <>
     <Navbar/>
 
-    <h1 id="greeting">Hello [name] {date}!</h1>
+    <h1 id="greeting">Hello [NAME]!</h1>
     
     {/* Side content for money information */}
     <div id="side-content">

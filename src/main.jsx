@@ -5,13 +5,13 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import App from './App.jsx'
-import Monthly_Planner from './Monthly-Planner/Monthly_Planner.jsx';
-import Login from './Registration/login.jsx';
-import Register from './Registration/register.jsx';
+import Monthly_Planner from './components/Monthly-Planner/Monthly_Planner.jsx';
+import Login from './components/Registration/login.jsx';
+import Register from './components/Registration/register.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Login/>,
+    element: <App/>,
   },
   {
     path: "Monthly-Planner",

@@ -1,6 +1,6 @@
 import React from 'react'
-import Navbar from "../components/Navbar";
-import "../styles.css"
+import Navbar from "../Navbar";
+import "../../styles.css"
 
 
 export default function Monthly_Planner(){

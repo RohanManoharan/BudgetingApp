@@ -1,18 +1,16 @@
-export function Transaction_List({ transactions }){
+import { Transaction_Item } from "./Transaction_Item"
+
+export function Transaction_List({ transactions, month, deleteTransaction }){
+    const sorted = [...transactions].sort((a, b) => {
+        return b.day - a.day
+    })
     return (
         <>
-        {transactions.map(transaction => {
+        {sorted.map(transaction => {    
             return (
-                <tr key={transaction.id}>
-                    <td>{transaction.service}</td>
-                    <td>{transaction.desc}</td>
-                    <td>{transaction.category}</td>
-                    <td>{transaction.date}</td>
-                    <td>$ {transaction.price}</td>
-                    <td><button className="transaction-button">Edit</button></td>
-                </tr>
+                <Transaction_Item transaction={transaction} month={month} deleteTransaction={deleteTransaction} />
             )
         })}
-        </>
+    </>
     )
 }

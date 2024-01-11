@@ -56,16 +56,21 @@ export default function App(){
 
       {showTForm && <Transaction_Form onSubmit={addTransaction} date={date} setShowTForm={setShowTForm} />}
       <table>
-        <tr>
-          <th>Service</th>
-          <th>Description</th>
-          <th>Category</th>
-          <th>Date</th>
-          <th>Amount</th>
-          <th></th>
-        </tr>
-        <Transaction_List transactions={transactions} />
+        <thead>
+          <tr>
+            <th>Service</th>
+            <th>Description</th>
+            <th>Category</th>
+            <th>Date</th>
+            <th>Amount</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <Transaction_List transactions={transactions} />
+        </tbody>
       </table>
+      {transactions.length === 0 && "No Transactions for this Month"}
     </div>
 
 

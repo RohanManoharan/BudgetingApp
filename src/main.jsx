@@ -9,13 +9,13 @@ import Monthly_Planner from './components/Monthly-Planner/Monthly_Planner.jsx';
 import Login from './components/Registration/login.jsx';
 import Register from './components/Registration/register.jsx';
 const router = createBrowserRouter([
-  // {
-  //   path: "/",
-  //   element: <Login/>,
-  // },
   {
     path: "/",
     element: <Register/>,
+  },
+  {
+    path: "/login",
+    element: <Login/>,
   },
   {
     path: "home",

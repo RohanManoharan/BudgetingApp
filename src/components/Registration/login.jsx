@@ -4,6 +4,7 @@ import '../../styles.css';
 import { FaUser, FaLock } from "react-icons/fa";
 
 export default function Login() {
+
     return (
         <>
         <div className='wrapper'>

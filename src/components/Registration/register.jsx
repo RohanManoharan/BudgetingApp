@@ -18,13 +18,11 @@ export default function Register() {
                 <div className='input-box'>
                     <input type="password" placeholder='Password' required/>
                 </div>
-                
-
 
                 <button className="login-btn" type='submit'>Register</button>
 
                 <div className='register-link'>
-                    <p>Already have an account? <a href="login.jsx">Login</a></p>
+                    <p>Already have an account? <a href="/login">Login</a></p>
                 </div>
             </form>
         </div>

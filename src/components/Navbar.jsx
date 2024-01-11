@@ -9,7 +9,7 @@ export default function Navbar(){
             <ul className='navbar-menu'>
                 <li><a href="/">Home</a></li>
                 <li><a href="/Monthly-Planner">Monthly Planner</a></li>
-                <li><a href="/">blank</a></li>
+                <li><a href="/">Contact</a></li>
             </ul>
     </div>
     )

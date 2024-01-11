@@ -8,7 +8,7 @@ export default function App(){
   const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
   let monthName = month[(new Date()).getMonth()];
   let date = (new Date()).toDateString().slice(4, 10).replace(/\b0/, '');
-  
+
   const[money, setMoney] = useState({ total: 0, gained: 0, spent: 0 });
   const[showTForm, setShowTForm] = useState(false);
   const[transactions, setTransactions] = useState([]);
@@ -51,8 +51,6 @@ export default function App(){
     <Navbar/>
     <h1 id="greeting">Hello [NAME]!</h1>
     <Money_SideBar money={money} />
-
-    {/* Shows transactions from the current month */}
     <Transaction_Table monthName={monthName} date={date} showTForm={showTForm} setShowTForm={setShowTForm} transactions={transactions} addTransaction={addTransaction} deleteTransaction={deleteTransaction} />
     </>
   )

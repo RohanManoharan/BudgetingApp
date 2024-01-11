@@ -1,10 +1,34 @@
-const express = require('express')
-const app = express()
+const express = require('express');
+const mysql = require('mysql2');
+const cors = require('cors');
 
-const db = require('./models')
+const app = express();
 
-db.sequelize.sync().then(()=>{
-    app.listen(3001, () => {
-        console.log("Server running on port 3001");
-    });
+app.use(express.json());
+app.use(cors());
+
+const db = mysql.createConnection({
+    user: "root",
+    host: "localhost",
+    password: "c?1WcotlMi4aRRaRRWR4RMMc",
+    database: "userlogin",
+});
+
+app.post('/register', (req, res)=> {
+
+    const email = req.body.email
+    const password = req.body.password
+    const name = req.body.name
+
+
+    db.query("INSERT INTO users (name, email, password) VALUES (?,?,?)", 
+    [name, email, password], 
+    (err, result)=>{
+        console.log(err)
+    }
+);
 })
+
+app.listen(3001, () => {
+    console.log("Running server on port 3001");
+});

@@ -19,11 +19,6 @@ export default function Login() {
 
                 </div>
 
-                <div className='remember-forgot'>
-                    <label htmlFor=""><input type="checkbox" />Remember Me</label>
-                    <a href="#">Forgot Password?</a>
-                </div>
-
                 <button className="login-btn" type='submit'>Login</button>
 
                 <div className='register-link'>

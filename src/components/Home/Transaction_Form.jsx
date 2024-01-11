@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export function Transaction_Form({ onSubmit, date, setShowTForm }){
+export function Transaction_Form({ addTransaction, date, setShowTForm}){
     const[newTService, setnewTService] = useState();
     const[newTDescription, setnewTDescription] = useState();
     const[newTCategory, setnewTCategory] = useState();
@@ -9,7 +9,7 @@ export function Transaction_Form({ onSubmit, date, setShowTForm }){
 
     function handleSubmit(){
         if (newTService === "" || newTPrice === "") return
-        onSubmit(newTService, newTDescription, newTCategory, date.slice(0, 3)+" "+newTDay, newTPrice)
+        addTransaction(newTService, newTDescription, newTCategory, newTDay, newTPrice)
         setShowTForm(false)
     }
 
@@ -29,8 +29,7 @@ export function Transaction_Form({ onSubmit, date, setShowTForm }){
                     <option value="Food">Food</option>
                     <option value="Miscellaneous">Miscellaneous</option>
                     <option value="option...">option...</option>
-                </select>
-            
+            </select>
             <div className="transaction-input-block">
                 Jan 
                 <input type="number" min="1" max="31" id="transaction-day" className="transaction-input" placeholder={date.slice(4)} 

@@ -1,5 +1,5 @@
 const express = require('express');
-const mysql = require('mysql');
+const mysql = require('mysql2');
 const cors = require('cors');
 
 const app = express();
@@ -11,7 +11,7 @@ const db = mysql.createConnection({
     user: "root",
     host: "localhost",
     password: "c?1WcotlMi4aRRaRRWR4RMMc",
-    database: "budgetingapp",
+    database: "userlogin",
 });
 
 app.post('/register', (req, res)=> {

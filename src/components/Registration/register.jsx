@@ -11,7 +11,7 @@ export default function Register() {
     const [nameReg, setNameReg] = useState("")
 
     const register = () =>{
-        Axios.post('http://localhost3001/', {
+        Axios.post('http://localhost:3001/register', {
             email: emailReg,
             name: nameReg,
             password: passwordReg

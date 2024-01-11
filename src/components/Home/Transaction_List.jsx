@@ -1,10 +1,9 @@
 export function Transaction_List({ transactions }){
     return (
         <>
-        {transactions.length === 0 && <p style={{position: "absolute", marginLeft: "500px"}}>No Transactions for this Month</p>}
-        {(transactions.reverse()).map(transaction => {
+        {transactions.map(transaction => {
             return (
-                <tr>
+                <tr key={transaction.id}>
                     <td>{transaction.service}</td>
                     <td>{transaction.desc}</td>
                     <td>{transaction.category}</td>

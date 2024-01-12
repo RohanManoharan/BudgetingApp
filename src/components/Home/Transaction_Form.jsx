@@ -1,20 +1,24 @@
 import { useState } from "react"
 
-export function Transaction_Form({ addTransaction, date, setShowTForm}){
+// Form for the user to input info about their transaction oonsisting of the service, a description, a category, the date it was made and the amount
+// Service and description are text inputs, category is a selection and date and amount are number inputs
+export default function Transaction_Form({ addTransaction, date, setShowTForm}){
     const[newTransaction, setNewTransaction] = useState({ service: "", desc: "", category: "", day: date.slice(4), price: ""})
 
+    // On the submit of the form, the new transaction is added and the form is set to not show
     function handleSubmit(){
         if (newTransaction.service === "") return
-        addTransaction(newTransaction.service, newTransaction.desc, newTransaction.category, newTransaction.day, newTransaction.price)
+        addTransaction(...Object.values(newTransaction))
         setShowTForm(false)
     }
+
     return(
-        <form onSubmit={handleSubmit} className="transaction-form">
-            <input type="text" placeholder="Service" id="transaction-service" className="transaction-input"
+        <form onSubmit={handleSubmit} className="inline-form" id="transaction-form">
+            <input type="text" placeholder="Service" id="transaction-service-input" className="transaction-input"
                 value={newTransaction.service}
                 onChange={e => setNewTransaction({...newTransaction, service: e.target.value})}
                 required />
-            <input type="text" placeholder="Description" id="transaction-desc" className="transaction-input"
+            <input type="text" placeholder="Description" id="transaction-desc-input" className="transaction-input"
                 value={newTransaction.desc}
                 onChange={e => setNewTransaction({...newTransaction, desc: e.target.value})}
                 required />
@@ -27,18 +31,18 @@ export function Transaction_Form({ addTransaction, date, setShowTForm}){
             </select>
             <div className="transaction-input-block">
                 Jan 
-                <input type="number" min="1" max="31" id="transaction-day" className="transaction-input" placeholder={date.slice(4)} 
+                <input type="number" min="1" max="31" id="transaction-day-input" className="transaction-input" placeholder={date.slice(4)} 
                 value={newTransaction.day}
                 onChange={e => setNewTransaction({...newTransaction, day: e.target.value})} />
             </div>
             <div className="transaction-input-block">
                 $
-                <input type="number" step=".01" placeholder="20.00" id="transaction-price" className="transaction-input" required
+                <input type="number" step=".01" placeholder="20.00" id="transaction-price-input" className="transaction-input" required
                     value={newTransaction.price}
                     onChange={e => setNewTransaction({...newTransaction, price: e.target.value})}
                 />
             </div>
-            <button className="transaction-button">Add</button>
+            <button id="add-transaction-button" className="button transaction-input transaction-button">Add</button>
         </form>
     )
 }

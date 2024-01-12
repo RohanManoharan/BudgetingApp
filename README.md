@@ -1,8 +1,6 @@
-# BudgetingApp
-
-Made Public as of January 11th, 2024
-
+# BudgetingApp [WIP]
 Simple Full Stack web app designed to learn more about React.js, Node.js, SQL, and various libraries. 
+Made Public as of January 11th, 2024
 
 ## TODO
 - Logic to set total balance

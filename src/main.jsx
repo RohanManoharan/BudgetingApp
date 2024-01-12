@@ -23,7 +23,7 @@ const router = createBrowserRouter([
     element: <App/>,
   },
   {
-    path: "/Monthly-Planner",
+    path: "Monthly-Planner",
     element: <Monthly_Planner/>,
   },
 ]);

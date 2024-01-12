@@ -27,7 +27,43 @@ app.post('/register', (req, res)=> {
         console.log(err)
     }
 );
-})
+});
+
+app.post("/login", (req, res) =>{
+    const email = req.body.email
+    const password = req.body.password
+
+
+    db.query("SELECT * FROM users WHERE email = ? AND password = ?", 
+    [email, password], 
+    (err, result)=>{
+
+        if (err) {
+            res.send({err: err});
+        }
+
+        if (result.length > 0) {
+            res.send(result);
+        } else {
+            res.send({message: "Wrong email/password!"});
+        }
+    }
+);
+});
+
+// app.post("/home", (req, res) =>{
+//     const name = req.body.name
+
+//     db.query("SELECT name FROM users WHERE email = ? AND password = ?", 
+//     [email, password], 
+//     (err, result)=>{
+//         if(err){
+//             console.log(err);
+//         } else {
+//             res.send(result.name);
+//         }
+//     });
+// });
 
 app.listen(3001, () => {
     console.log("Running server on port 3001");

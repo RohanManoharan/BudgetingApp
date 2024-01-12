@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Axios from 'axios'
+import axios from 'axios'
 import './login-register.css';
 
 import { FaUser, FaLock } from "react-icons/fa";
@@ -11,14 +11,14 @@ export default function Register({ nameReg, setNameReg }) {
     // const [nameReg, setNameReg] = useState("")
 
     const register = () =>{
-        Axios.post('http://localhost:3001/register', {
+        axios.post('http://localhost:3001/register', {
             email: emailReg,
             name: nameReg,
             password: passwordReg
         }).then((response) => {
             console.log(response);
         });
-    }
+    };
 
     return (
         <>
@@ -36,7 +36,7 @@ export default function Register({ nameReg, setNameReg }) {
                 </div>
                 <div className='input-box'>
                 <input type="text" 
-                    placeholder='Email' 
+                    placeholder='Username' 
                     required 
                     onChange={(e) => {
                         setEmailReg(e.target.value);
@@ -53,7 +53,7 @@ export default function Register({ nameReg, setNameReg }) {
                     />
                 </div>
 
-                <button onClick={register} className="login-btn" type='submit'>Register</button>
+                <button onClick={register} className="login-btn" type='button'>Register</button>
 
                 <div className='register-link'>
                     <p>Already have an account? <a href="/login">Login</a></p>

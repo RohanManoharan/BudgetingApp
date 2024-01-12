@@ -1,5 +1,4 @@
 import React from 'react'
-
 import ReactDOM from 'react-dom/client'
 import {
   createBrowserRouter,
@@ -20,11 +19,11 @@ const router = createBrowserRouter([
     element: <Login/>,
   },
   {
-    path: "home",
+    path: "/home",
     element: <App/>,
   },
   {
-    path: "Monthly-Planner",
+    path: "/Monthly-Planner",
     element: <Monthly_Planner/>,
   },
 ]);

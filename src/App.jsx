@@ -12,6 +12,14 @@ export default function App(){
   const[money, setMoney] = useState({ total: 0, gained: 0, spent: 0 });
   const[showTForm, setShowTForm] = useState(false);
   const[transactions, setTransactions] = useState([]);
+
+//   const name = () =>{
+//     axios.post('http://localhost:3001/home', {
+//         name: nameReg
+//     }).then((response) => {
+//         console.log(response);
+//     });
+// };
   
   function addTransaction(service, description, category, day, price){
     setTransactions(currentTransactions => {
@@ -49,7 +57,7 @@ export default function App(){
   return (
     <>
     <Navbar/>
-    <h1 id="greeting">Hello [NAME]!</h1>
+    <h1 id="greeting">Hello [name]!</h1>
     <Money_SideBar money={money} />
     <Transaction_Table monthName={monthName} date={date} showTForm={showTForm} setShowTForm={setShowTForm} transactions={transactions} addTransaction={addTransaction} deleteTransaction={deleteTransaction} />
     </>

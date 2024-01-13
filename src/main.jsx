@@ -31,14 +31,14 @@ import Register from './components/Registration/register.jsx';
 
 export default function App() {
   const [nameReg, setNameReg] = useState("")
-  function handleUsername(e)  {
-    setNameReg(e.target.value);
-  }
+  // function handleUsername(e)  {
+  //   setNameReg(e.target.value);
+  // }
 
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Register nameReg={nameReg} setNameReg={setNameReg} handleUsername={handleUsername}/>}></Route>
+        <Route path="/" element={<Register nameReg={nameReg} setNameReg={setNameReg} handleUsername={e => setNameReg(e.target.value)}/>}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="home" element={<Home nameReg={nameReg}/>}></Route>
         <Route path="Monthly-Planner" element={<Monthly_Planner />}></Route>

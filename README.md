@@ -4,6 +4,7 @@ Simple Full Stack web app designed to learn more about React.js, Node.js, SQL, a
 Made Public as of January 11th, 2024
 
 ## TODO
+- Host webapp
 - Logic to set total balance
 - Enable storing transactions into local storage (Temporarily, until we can figure out a way to store it in a SQL database)
 - Display user's name in homepage

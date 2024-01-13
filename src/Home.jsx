@@ -52,7 +52,7 @@ export default function Home(){
     // Components that make up the homepage
     <div className="homepage">
       <Navbar/>
-      <h1 id="greeting" className="heading">Hello {nameReg}!</h1>
+      <h1 id="greeting" className="heading">Hello [NAME]!</h1>
       <Money_SideBar money={money} />
       <Transaction_UI monthName={monthName} date={date} showTForm={showTForm} setShowTForm={setShowTForm} transactions={transactions} addTransaction={addTransaction} deleteTransaction={deleteTransaction} />
     </div>

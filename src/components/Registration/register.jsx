@@ -4,11 +4,11 @@ import './login-register.css';
 
 import { FaUser, FaLock } from "react-icons/fa";
 
-export default function Register() {
+export default function Register({ nameReg, setNameReg, handleUsername }) {
 
     const [emailReg, setEmailReg] = useState("")
     const [passwordReg, setPasswordReg] = useState("")
-    const [nameReg, setNameReg] = useState("")
+    // const [nameReg, setNameReg] = useState("")
 
     const register = () =>{
         axios.post('http://localhost:3001/register', {
@@ -29,9 +29,10 @@ export default function Register() {
                     <input type="text" 
                     placeholder='Name' 
                     required 
-                    onChange={(e) => {
-                        setNameReg(e.target.value);
-                    }}
+                    // onChange={(e) => {
+                    //     setNameReg(e.target.value);
+                    // }}
+                    onChange={() => handleUsername(e)}
                     />
                 </div>
                 <div className='input-box'>

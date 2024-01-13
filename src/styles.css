@@ -8,20 +8,8 @@ html{
 
 }
 
-.homepage{
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-}
-
-#side-content{
-    float: left;
-    width: 340px;
-}
-
 .module{
-    padding: 40px;
+    padding: 10px;
     width: 300px;
     border-radius: 10px;
     margin: 20px;
@@ -38,11 +26,11 @@ html{
     margin-left: 20px;
 }
 
-.heading {
+h1, h2{
     text-align: center;
 }
 
-.amounts {
+.amounts{
     font-size: 40px;
 }
 
@@ -62,31 +50,22 @@ html{
     background-color: #16573f;
 }
 
-.button {
-    background-color: rgb(44, 44, 54);
-    border-radius: 10px;
-    font-size: 18px;
-    height: 40px;
-}
-
-#transactions-container{
-    text-align: center;
-    width: 100%;
-    margin-top: -60px;
-}
-
-#table-month{
-    font-size: 75px;
-}
-
 #transactions {
+    overflow-x: auto;
     margin-top: -10%;
-    width: 100%;
+    width: 67%;
+    margin-left: 500px;
     text-align: center;
     height: 700px;
 }
 
-#new-transaction-button {
+button{
+    background-color: rgb(44, 44, 54);
+    border-radius: 10px;
+    height: 30px;
+}
+
+#add-transaction {
     margin-top: 15px;
     width: 600px;
 }
@@ -94,28 +73,26 @@ html{
 .transaction-input {
     background-color: rgb(44, 44, 54);
     border-radius: 10px;
-    height: 40px;
+    height: 30px;
     margin: 10px;
     margin-top: 20px;
     font-size: 15px;
-    padding-left: 5px;
-    font-size: 18px;
 }
 
-#transaction-desc-input {
+#transaction-desc {
     width: 300px;
 }
 
-#transaction-category-input {
+#transaction-category {
     height: 37px;
     width: 170px;
 }
 
-#transaction-day-input {
+#transaction-day {
     width: 50px;
 }
 
-#transaction-price-input {
+#transaction-price{
     width: 100px;
 }
 
@@ -124,20 +101,11 @@ html{
     margin: 10px;
 }
 
-.transaction-button {
-    padding: 5px 10px 20px;
-}
-
-#add-transaction-button {
-    position: relative;
-    top: -2px;
-}   
-
 table{
-    margin: auto;
     margin-top: 10px;
-    font-size: 20px;
-    width: 80%;
+    font-size: 18px;
+    width: 100%;
+    text-align: center;
     border-spacing: 0;
     border-collapse: separate;
     border: 3px solid rgb(18, 20, 22);
@@ -157,6 +125,25 @@ th, td {
 
 tr:nth-child(even) {background-color: rgb(35, 41, 61);}
 tr:hover {background-color: rgb(15, 53, 50);}
+
+input, select{
+    background-color: #62676e;
+    border-radius: 5px;
+    height: 25px;
+}
+
+select {
+    height: 30px;
+}
+
+#table-month{
+    margin-top: -35%;
+    width: 67%;
+    margin-left: 25%;
+    text-align: center;
+    height: 250px;
+    font-size: 75px;
+}
 
 .navbar{
     display: flex;
@@ -187,6 +174,7 @@ tr:hover {background-color: rgb(15, 53, 50);}
 }
 
 .navbar-menu li:hover {
+    /* background-color: rgb(63, 71, 80); */
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
 }

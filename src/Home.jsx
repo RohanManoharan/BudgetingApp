@@ -5,7 +5,7 @@ import Transaction_UI from "./components/Home/Transaction_UI";
 import "./styles.css"
 
 // Homepage of the App
-export default function Home({ nameReg }){
+export default function Home(){
   // Variables to get information related to dates
   const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
   let monthName = month[(new Date()).getMonth()];

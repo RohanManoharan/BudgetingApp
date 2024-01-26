@@ -38,7 +38,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Register nameReg={nameReg} setNameReg={setNameReg} handleUsername={e => setNameReg(e.target.value)}/>}></Route>
+        <Route path="/" element={<Register nameReg={nameReg} setNameReg={setNameReg} handleUsername={() => setNameReg("test")}/>}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="home" element={<Home nameReg={nameReg}/>}></Route>
         <Route path="Monthly-Planner" element={<Monthly_Planner />}></Route>

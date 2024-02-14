@@ -18,11 +18,9 @@ export default function Home(){
   
   // Adds the new transaction described by the arguments to the transactions list and updates the money accordingly
   function addTransaction(service, description, category, day, price){
-    // Returns a new array with all previous transaction in addition to the new transaction
     setTransactions(currentTransactions => {
       return [...currentTransactions, { id: crypto.randomUUID(), service: service, desc: description, category: category, day: day, price: price }]
     })
-    // Decides how to update money depending if the transaction price is negative or positive
     parseFloat(price) < 0 ? (setMoney(currentMoney => {
       return {total: currentMoney.total+parseFloat(price), gained: currentMoney.gained, spent: currentMoney.spent+parseFloat(price)}
     })) : (
@@ -34,7 +32,6 @@ export default function Home(){
 
   // Deletes the transaction specified by the id from the list and updates the money accodingly
   function deleteTransaction(id, price){
-    // Decides how to update money depending if the transaction price is negative or positive
     parseFloat(price) < 0 ? (setMoney(currentMoney => {
       return {total: currentMoney.total-parseFloat(price), gained: currentMoney.gained, spent: currentMoney.spent-parseFloat(price)}
     })) : (
@@ -43,7 +40,6 @@ export default function Home(){
       }))
     )
     
-    // Filters the array so that it excludes the transaction with the specified id
     setTransactions(currentTransactions => {
       return currentTransactions.filter(transaction => transaction.id !== id)
     })

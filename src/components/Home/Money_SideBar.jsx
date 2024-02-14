@@ -1,5 +1,4 @@
 // The sidebar shows info related to the user's money
-// Each "module" is a div all wrapped in a div
 export default function Money_SideBar({ money }){
     return(
         <div id="side-content" className="container">

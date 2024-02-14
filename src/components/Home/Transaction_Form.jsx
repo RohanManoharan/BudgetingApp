@@ -1,7 +1,6 @@
 import { useState } from "react"
 
 // Form for the user to input info about their transaction oonsisting of the service, a description, a category, the date it was made and the amount
-// Service and description are text inputs, category is a selection and date and amount are number inputs
 export default function Transaction_Form({ addTransaction, date, setShowTForm}){
     const[newTransaction, setNewTransaction] = useState({ service: "", desc: "", category: "", day: date.slice(4), price: ""})
 

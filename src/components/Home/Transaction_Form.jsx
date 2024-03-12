@@ -26,7 +26,6 @@ export default function Transaction_Form({ addTransaction, date, setShowTForm}){
                     <option value="Entertainment">Entertainment</option>
                     <option value="Food">Food</option>
                     <option value="Miscellaneous">Miscellaneous</option>
-                    <option value="option...">option...</option>
             </select>
             <div className="transaction-input-block">
                 Jan 
